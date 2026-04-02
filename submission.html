@@ -7,30 +7,138 @@
 	<title>Data Visualization Activity on SVG</title>
 
 	<style type="text/css">
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f4f6f8;
+			margin: 0;
+			padding: 30px;
+			text-align: center;
+		}
+
 		#header-title {
 			font-size: 24px;
+			margin-bottom: 20px;
+			color: #1f2937;
 		}
 
 		#visualization-activity {
 			width: 600px;
 			height: 500px;
+			border: 2px solid #d1d5db;
+			background: white;
+			box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 		}
 
 		/* YOUR CSS CODE WILL GO HERE */
+		.star {
+			fill: white;
+			opacity: 0.9;
+		}
 
+		.mountain-back {
+			fill: #374151;
+		}
 
+		.mountain-front {
+			fill: #1f2937;
+		}
+
+		.snow {
+			fill: #f9fafb;
+		}
+
+		.lake {
+			fill: #2563eb;
+			opacity: 0.35;
+		}
+
+		.reflection {
+			fill: #93c5fd;
+			opacity: 0.18;
+		}
+
+		.tree-trunk {
+			fill: #4b5563;
+		}
+
+		.tree-leaf {
+			fill: #065f46;
+		}
 	</style>
 </head>
 
 <body>
 	<h1 id="header-title">
-		In-Class Acitivity by REPLACE_WITH_YOUR_NAME
+		In-Class Activity by REPLACE_WITH_YOUR_NAME
 	</h1>
 
-	<svg id="visualization-activity">
-		<!-- YOUR SVG CODE WILL GO HERE -->
+	<svg id="visualization-activity" viewBox="0 0 600 500">
+		<!-- background sky -->
+		<rect x="0" y="0" width="600" height="500" fill="#0f172a"></rect>
 
+		<!-- moon -->
+		<circle cx="470" cy="95" r="42" fill="#fef3c7"></circle>
+		<circle cx="485" cy="85" r="36" fill="#0f172a"></circle>
 
+		<!-- stars -->
+		<circle class="star" cx="70" cy="70" r="2.5"></circle>
+		<circle class="star" cx="110" cy="120" r="2"></circle>
+		<circle class="star" cx="150" cy="60" r="3"></circle>
+		<circle class="star" cx="220" cy="90" r="2"></circle>
+		<circle class="star" cx="280" cy="55" r="2.5"></circle>
+		<circle class="star" cx="330" cy="100" r="2"></circle>
+		<circle class="star" cx="390" cy="65" r="3"></circle>
+		<circle class="star" cx="540" cy="70" r="2.5"></circle>
+		<circle class="star" cx="520" cy="150" r="2"></circle>
+		<circle class="star" cx="90" cy="170" r="2.5"></circle>
+		<circle class="star" cx="180" cy="145" r="2"></circle>
+		<circle class="star" cx="260" cy="150" r="2.5"></circle>
+
+		<!-- lake -->
+		<rect x="0" y="330" width="600" height="170" class="lake"></rect>
+
+		<!-- back mountains -->
+		<polygon class="mountain-back" points="0,340 90,210 170,340"></polygon>
+		<polygon class="mountain-back" points="120,340 240,180 360,340"></polygon>
+		<polygon class="mountain-back" points="300,340 420,200 520,340"></polygon>
+		<polygon class="mountain-back" points="430,340 540,220 600,340"></polygon>
+
+		<!-- front mountains -->
+		<polygon class="mountain-front" points="0,370 130,250 250,370"></polygon>
+		<polygon class="mountain-front" points="180,370 320,230 470,370"></polygon>
+		<polygon class="mountain-front" points="360,370 500,245 600,370"></polygon>
+
+		<!-- snow caps -->
+		<polygon class="snow" points="90,210 68,245 108,245"></polygon>
+		<polygon class="snow" points="240,180 210,225 270,225"></polygon>
+		<polygon class="snow" points="420,200 395,235 445,235"></polygon>
+		<polygon class="snow" points="130,250 105,278 150,278"></polygon>
+		<polygon class="snow" points="320,230 292,262 345,262"></polygon>
+		<polygon class="snow" points="500,245 475,275 520,275"></polygon>
+
+		<!-- moon reflection -->
+		<ellipse cx="470" cy="385" rx="35" ry="10" class="reflection"></ellipse>
+		<ellipse cx="470" cy="408" rx="26" ry="7" class="reflection"></ellipse>
+		<ellipse cx="470" cy="425" rx="18" ry="5" class="reflection"></ellipse>
+
+		<!-- mountain reflection -->
+		<polygon class="reflection" points="0,330 90,390 170,330"></polygon>
+		<polygon class="reflection" points="120,330 240,405 360,330"></polygon>
+		<polygon class="reflection" points="300,330 420,398 520,330"></polygon>
+		<polygon class="reflection" points="430,330 540,388 600,330"></polygon>
+
+		<!-- trees -->
+		<rect x="70" y="310" width="8" height="28" class="tree-trunk"></rect>
+		<polygon class="tree-leaf" points="74,270 52,315 96,315"></polygon>
+		<polygon class="tree-leaf" points="74,285 56,325 92,325"></polygon>
+
+		<rect x="525" y="305" width="8" height="30" class="tree-trunk"></rect>
+		<polygon class="tree-leaf" points="529,265 507,312 551,312"></polygon>
+		<polygon class="tree-leaf" points="529,282 512,322 546,322"></polygon>
+
+		<rect x="555" y="315" width="7" height="22" class="tree-trunk"></rect>
+		<polygon class="tree-leaf" points="558,285 542,318 574,318"></polygon>
+		<polygon class="tree-leaf" points="558,296 545,327 571,327"></polygon>
 	</svg>
 
 </body>
